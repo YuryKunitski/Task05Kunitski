@@ -1,0 +1,85 @@
+15:08:29,628 INFO  [fileAppender] First log in fileggggg
+2019-03-31 23:55:43 INFO  console:15 - Main thread started
+2019-03-31 23:55:43 INFO  file:16 - Main thread started_file
+2019-03-31 23:56:36 INFO  file:16 - Main thread started_file
+2019-03-31 23:56:53 INFO  file:16 - Main thread started_file
+2019-03-31 23:57:51 INFO  file:16 - Main thread started_file
+2019-03-31 23:58:25 INFO  file:16 - Main thread started_file
+2019-03-31 23:59:02 INFO  file:16 - Main thread started
+2019-03-31 23:59:03 INFO  file:32 - Main thread finished
+2019-04-01 00:03:05 INFO  file:16 - Start main thread!
+2019-04-01 00:03:05 INFO  file:62 - Car #10 entered into the parking and got place #1.
+2019-04-01 00:03:05 INFO  file:62 - Car #11 entered into the parking and got place #2.
+2019-04-01 00:03:05 INFO  file:75 - Car #10 released parking place #1 and exit from the parking!
+2019-04-01 00:03:05 INFO  file:62 - Car #12 entered into the parking and got place #3.
+2019-04-01 00:03:05 INFO  file:62 - Car #13 entered into the parking and got place #4.
+2019-04-01 00:03:05 INFO  file:62 - Car #14 entered into the parking and got place #5.
+2019-04-01 00:03:05 INFO  file:62 - Car #15 entered into the parking and got place #1.
+2019-04-01 00:03:05 INFO  file:68 - Waiting time out. Parking has not a free space. Car #28 move to another parking. Activity current car is true!
+2019-04-01 00:03:05 INFO  file:75 - Car #12 released parking place #3 and exit from the parking!
+2019-04-01 00:03:05 INFO  file:62 - Car #16 entered into the parking and got place #3.
+2019-04-01 00:03:05 INFO  file:68 - Waiting time out. Parking has not a free space. Car #20 move to another parking. Activity current car is true!
+2019-04-01 00:03:06 INFO  file:68 - Waiting time out. Parking has not a free space. Car #21 move to another parking. Activity current car is true!
+2019-04-01 00:03:06 INFO  file:68 - Waiting time out. Parking has not a free space. Car #24 move to another parking. Activity current car is true!
+2019-04-01 00:03:06 INFO  file:75 - Car #16 released parking place #3 and exit from the parking!
+2019-04-01 00:03:06 INFO  file:62 - Car #17 entered into the parking and got place #3.
+2019-04-01 00:03:06 INFO  file:68 - Waiting time out. Parking has not a free space. Car #23 move to another parking. Activity current car is true!
+2019-04-01 00:03:06 INFO  file:75 - Car #15 released parking place #1 and exit from the parking!
+2019-04-01 00:03:06 INFO  file:62 - Car #18 entered into the parking and got place #1.
+2019-04-01 00:03:06 INFO  file:75 - Car #11 released parking place #2 and exit from the parking!
+2019-04-01 00:03:06 INFO  file:62 - Car #19 entered into the parking and got place #2.
+2019-04-01 00:03:06 INFO  file:68 - Waiting time out. Parking has not a free space. Car #29 move to another parking. Activity current car is true!
+2019-04-01 00:03:06 INFO  file:75 - Car #14 released parking place #5 and exit from the parking!
+2019-04-01 00:03:06 INFO  file:62 - Car #22 entered into the parking and got place #5.
+2019-04-01 00:03:06 INFO  file:75 - Car #17 released parking place #3 and exit from the parking!
+2019-04-01 00:03:06 INFO  file:62 - Car #25 entered into the parking and got place #3.
+2019-04-01 00:03:06 INFO  file:75 - Car #13 released parking place #4 and exit from the parking!
+2019-04-01 00:03:06 INFO  file:62 - Car #26 entered into the parking and got place #4.
+2019-04-01 00:03:06 INFO  file:75 - Car #18 released parking place #1 and exit from the parking!
+2019-04-01 00:03:06 INFO  file:62 - Car #27 entered into the parking and got place #1.
+2019-04-01 00:03:06 INFO  file:75 - Car #22 released parking place #5 and exit from the parking!
+2019-04-01 00:03:07 INFO  file:75 - Car #25 released parking place #3 and exit from the parking!
+2019-04-01 00:03:07 INFO  file:75 - Car #26 released parking place #4 and exit from the parking!
+2019-04-01 00:03:07 INFO  file:75 - Car #19 released parking place #2 and exit from the parking!
+2019-04-01 00:03:07 INFO  file:75 - Car #27 released parking place #1 and exit from the parking!
+2019-04-01 00:03:07 INFO  file:32 - Finish main thread!
+2019-04-01 00:06:51 INFO  file:16 - Start main thread!
+2019-04-01 00:06:51 INFO  file:62 - Car #10 entered into the parking and got place #1.
+2019-04-01 00:06:51 INFO  file:62 - Car #11 entered into the parking and got place #2.
+2019-04-01 00:06:51 INFO  file:62 - Car #12 entered into the parking and got place #3.
+2019-04-01 00:06:51 INFO  file:62 - Car #13 entered into the parking and got place #4.
+2019-04-01 00:06:51 INFO  file:62 - Car #14 entered into the parking and got place #5.
+2019-04-01 00:06:51 INFO  file:76 - Car #14 released parking place #5 and exit from the parking!
+2019-04-01 00:06:51 INFO  file:62 - Car #15 entered into the parking and got place #5.
+2019-04-01 00:06:51 INFO  file:76 - Car #12 released parking place #3 and exit from the parking!
+2019-04-01 00:06:51 INFO  file:62 - Car #16 entered into the parking and got place #3.
+2019-04-01 00:06:51 INFO  file:76 - Car #10 released parking place #1 and exit from the parking!
+2019-04-01 00:06:51 INFO  file:62 - Car #17 entered into the parking and got place #1.
+2019-04-01 00:06:51 INFO  file:76 - Car #17 released parking place #1 and exit from the parking!
+2019-04-01 00:06:51 INFO  file:62 - Car #18 entered into the parking and got place #1.
+2019-04-01 00:06:51 INFO  file:68 - Car #23Waiting time out. This car move to another parking. Parking has not a free space. Activity current car is true!
+2019-04-01 00:06:51 INFO  file:68 - Car #22Waiting time out. This car move to another parking. Parking has not a free space. Activity current car is true!
+2019-04-01 00:06:51 INFO  file:76 - Car #16 released parking place #3 and exit from the parking!
+2019-04-01 00:06:51 INFO  file:62 - Car #19 entered into the parking and got place #3.
+2019-04-01 00:06:51 INFO  file:76 - Car #15 released parking place #5 and exit from the parking!
+2019-04-01 00:06:51 INFO  file:62 - Car #20 entered into the parking and got place #5.
+2019-04-01 00:06:51 INFO  file:76 - Car #13 released parking place #4 and exit from the parking!
+2019-04-01 00:06:51 INFO  file:62 - Car #21 entered into the parking and got place #4.
+2019-04-01 00:06:52 INFO  file:76 - Car #21 released parking place #4 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:62 - Car #24 entered into the parking and got place #4.
+2019-04-01 00:06:52 INFO  file:76 - Car #24 released parking place #4 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:62 - Car #25 entered into the parking and got place #4.
+2019-04-01 00:06:52 INFO  file:76 - Car #25 released parking place #4 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:62 - Car #26 entered into the parking and got place #4.
+2019-04-01 00:06:52 INFO  file:76 - Car #20 released parking place #5 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:62 - Car #27 entered into the parking and got place #5.
+2019-04-01 00:06:52 INFO  file:76 - Car #26 released parking place #4 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:62 - Car #28 entered into the parking and got place #4.
+2019-04-01 00:06:52 INFO  file:76 - Car #11 released parking place #2 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:62 - Car #29 entered into the parking and got place #2.
+2019-04-01 00:06:52 INFO  file:76 - Car #28 released parking place #4 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:76 - Car #18 released parking place #1 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:76 - Car #19 released parking place #3 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:76 - Car #29 released parking place #2 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:76 - Car #27 released parking place #5 and exit from the parking!
+2019-04-01 00:06:52 INFO  file:32 - Finish main thread!
