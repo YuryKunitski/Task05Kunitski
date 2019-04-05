@@ -9,25 +9,39 @@ import java.util.concurrent.TimeUnit;
 
 public class Parking {
 
-  private final static int PARKING_SIZE = 5;
-  private final Semaphore semaphore = new Semaphore(PARKING_SIZE, true);
-  private final Queue<ParkingPlace> parkingList = new LinkedList<>();
+  public final static int PARKING_SIZE = 5;
+  private Semaphore semaphore;
+  private Queue<ParkingPlace> parkingList;
+  private String name;
 
-  public Parking(Queue<ParkingPlace> parkingList) {
-    this.parkingList.addAll(parkingList);
-
+  public Parking() {
+    semaphore = new Semaphore(PARKING_SIZE, true);
+    parkingList = new LinkedList<>();
   }
 
-  public ParkingPlace entry(long maxWaitMillis)  {
+  public Parking(Queue<ParkingPlace> parkingList, String name) {
+    this();
+    this.name = name;
+    this.parkingList.addAll(parkingList);
+  }
+
+  public Queue<ParkingPlace> getParkingList() {
+    return parkingList;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public ParkingPlace entry(long maxWaitMillis) {
     ParkingPlace currentPlace = null;
     try {
       if (semaphore.tryAcquire(maxWaitMillis, TimeUnit.MILLISECONDS)) {
         currentPlace = parkingList.poll();
-        return currentPlace;
       }
 
     } catch (InterruptedException e) {
-      LogPrinter.FILE_LOGGER.error(e);
+      LogPrinter.LOGGER.error(e);
     }
     return currentPlace;
 

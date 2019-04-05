@@ -27,7 +27,7 @@ public class ParkingPlace {
     try {
       TimeUnit.MILLISECONDS.sleep(stayingTime);
     } catch (InterruptedException e) {
-      LogPrinter.FILE_LOGGER.error(e);
+      LogPrinter.LOGGER.error(e);
     }
   }
 

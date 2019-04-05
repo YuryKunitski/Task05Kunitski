@@ -1,17 +1,19 @@
 package by.epam.javawebtraining.kunitski.task05.util;
 
+import by.epam.javawebtraining.kunitski.task05.model.resource.Parking;
 import by.epam.javawebtraining.kunitski.task05.model.resource.ParkingPlace;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class ParkingPlaceGenerator {
 
-  private static final int MAX_PARKING_PLACE_NUMBER = 5;
+//  private static final int MAX_PARKING_PLACE_NUMBER = 5;
 
-  public static LinkedList<ParkingPlace> createParkingPlaces(){
+  public static Queue<ParkingPlace> createParkingPlaces(){
 
-    LinkedList<ParkingPlace> list = new LinkedList<>();
+    Queue<ParkingPlace> list = new LinkedList<>();
 
-    for (int i = 1; i <= MAX_PARKING_PLACE_NUMBER; i++) {
+    for (int i = 1; i <= Parking.PARKING_SIZE; i++) {
       list.add(new ParkingPlace(i));
     }
 

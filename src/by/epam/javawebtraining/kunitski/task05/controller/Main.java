@@ -1,36 +1,40 @@
 package by.epam.javawebtraining.kunitski.task05.controller;
 
+import by.epam.javawebtraining.kunitski.task05.model.resource.City;
 import by.epam.javawebtraining.kunitski.task05.model.thread.Car;
 import by.epam.javawebtraining.kunitski.task05.model.resource.Parking;
 import by.epam.javawebtraining.kunitski.task05.model.resource.ParkingPlace;
 import by.epam.javawebtraining.kunitski.task05.util.CarGenerator;
+import by.epam.javawebtraining.kunitski.task05.util.CityGenerator;
 import by.epam.javawebtraining.kunitski.task05.util.ParkingPlaceGenerator;
 import by.epam.javawebtraining.kunitski.task05.view.LogPrinter;
 
 import java.util.LinkedList;
+import java.util.Queue;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.locks.Lock;
 
 public class Main {
 
   public static void main(String[] args) {
 
-    LogPrinter.FILE_LOGGER.info("Start main thread!");
+    LogPrinter.LOGGER.info("Start main thread!");
 
-    LinkedList<ParkingPlace> list = ParkingPlaceGenerator.createParkingPlaces();
+    Queue<ParkingPlace> list = ParkingPlaceGenerator.createParkingPlaces();
+    City city = CityGenerator.cityGenerator();
+    Car[] cars = CarGenerator.createCars(city);
 
-    Parking parking = new Parking(list);
+    Executor executor = Executors.newFixedThreadPool(CarGenerator.CAR_COUNT);
 
-    Car[] cars = CarGenerator.createCars(parking);
-
-    for (Car c : cars){
-      try {
-        c.getThread().join();
-      } catch (InterruptedException e) {
-        LogPrinter.FILE_LOGGER.error(e);
-      }
+    for (Car c : cars) {
+      executor.execute(c);
     }
 
-    LogPrinter.FILE_LOGGER.info("Finish main thread!");
+    ((ExecutorService) executor).shutdown();
 
+    LogPrinter.LOGGER.info("Finish main thread!");
   }
 
 }

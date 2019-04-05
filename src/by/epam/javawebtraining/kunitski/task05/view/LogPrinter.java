@@ -5,5 +5,5 @@ import org.apache.log4j.Logger;
 
 public class LogPrinter {
 
-  public static final Logger FILE_LOGGER = Logger.getLogger("file");
+  public static final Logger LOGGER = Logger.getLogger("file");
 }

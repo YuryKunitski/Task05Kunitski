@@ -1,7 +1,9 @@
 package by.epam.javawebtraining.kunitski.task05.model.thread;
 
+import by.epam.javawebtraining.kunitski.task05.model.resource.City;
 import by.epam.javawebtraining.kunitski.task05.model.resource.Parking;
 import by.epam.javawebtraining.kunitski.task05.model.resource.ParkingPlace;
+import by.epam.javawebtraining.kunitski.task05.util.CityGenerator;
 import by.epam.javawebtraining.kunitski.task05.view.LogPrinter;
 
 public class Car implements Runnable {
@@ -9,15 +11,17 @@ public class Car implements Runnable {
   private long waitingTime;    //in millisecond
   private long stayingTime;    //in millisecond
   private boolean reading = false;
-  private Parking parking;
+  //  private Parking parking;
+  private City city;
   private Thread thread;
 
-  public Car(Parking parking, long waitingTime, long stayingTime) {
-    this.parking = parking;
+  public Car(City city, long waitingTime, long stayingTime) {
+//    this.parking = parking;
+    this.city = city;
     this.waitingTime = waitingTime;
     this.stayingTime = stayingTime;
     thread = new Thread(this);
-    thread.start();
+//    thread.start();
   }
 
   public long getWaitingTime() {
@@ -53,32 +57,37 @@ public class Car implements Runnable {
 
     ParkingPlace parkingPlace = null;
 
-    try {
-      parkingPlace = parking.entry(waitingTime);
+    for (Parking parking : city.getParkingList()) {
+      try {
 
-      if (parkingPlace != null) {
-        reading = true;
+        parkingPlace = parking.entry(waitingTime);
 
-        LogPrinter.FILE_LOGGER.info("Car #"
-                + thread.getId()
-                + " entered into the parking and got place #" + parkingPlace.getParkingPlaceNumber()+".");
+        if (parkingPlace != null) {
+          reading = true;
 
-        parkingPlace.carStaying(stayingTime);
-      } else {
-        LogPrinter.FILE_LOGGER.info("Car #" + thread.getId()
-                + "Waiting time out. This car move to another parking. Parking has not a free space. " +
-                "Activity current car is " + thread.isAlive()+"!");
+          LogPrinter.LOGGER.info("Car #"
+                  + thread.getId()
+                  + " entered into the parking - " + parking.getName() + " and got place #"
+                  + parkingPlace.getParkingPlaceNumber() + ".");
+
+          parkingPlace.carStaying(stayingTime);
+        } else {
+          LogPrinter.LOGGER.info("Car #" + thread.getId()
+                  + " waiting time out. Parking " + parking.getName()
+                  + " has not a free space.  This car move to another parking.");
+        }
+
+      } finally {
+        if (parkingPlace != null) {
+          reading = false;
+
+          LogPrinter.LOGGER.info("Car #" + thread.getId() + " released parking place #"
+            + parkingPlace.getParkingPlaceNumber() + " and exit from the parking " + parking.getName() + "!");
+
+          parking.exit(parkingPlace);
+          break;
+        }
       }
-    }  finally {
-      if (parkingPlace != null) {
-        reading = false;
-
-        LogPrinter.FILE_LOGGER.info("Car #" + thread.getId() + " released parking place #"
-                + parkingPlace.getParkingPlaceNumber() + " and exit from the parking!");
-
-        parking.exit(parkingPlace);
-      }
-
     }
   }
 
